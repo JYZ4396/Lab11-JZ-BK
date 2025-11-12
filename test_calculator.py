@@ -1,4 +1,3 @@
-https://github.com/JYZ4396/Lab11-JZ-BK.git
 import unittest
 from calculator import *
 import math
