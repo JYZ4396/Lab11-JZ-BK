@@ -1,6 +1,6 @@
 import unittest
-from calculator import *
 import math
+from calculator import *
 
 class TestCalculator(unittest.TestCase):
 
@@ -10,9 +10,9 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(add(0, 0), 0)
 
     def test_subtract(self):
-        self.assertEqual(sub(10, 4), 6)
-        self.assertEqual(sub(-5, -2), -3)
-        self.assertEqual(sub(0, 3), -3)
+        self.assertEqual(subtract(10, 4), 6)
+        self.assertEqual(subtract(-5, -2), -3)
+        self.assertEqual(subtract(0, 3), -3)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
@@ -20,17 +20,17 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self):
             # Valid base and argument
-        result = log(8, 2)
+        result = logarithm(8, 2)
         self.assertAlmostEqual(result, 3.0, places=4)
 
     def test_log_invalid_base(self):
             # log with invalid base or argument should raise ValueError
         with self.assertRaises(ValueError):
-            log(-5, 2)
+            logarithm(-5, 2)
         with self.assertRaises(ValueError):
-            log(5, 1)
+            logarithm(5, 1)
         with self.assertRaises(ValueError):
-            log(0, 10)
+            logarithm(0, 10)
 
     def test_multiply(self):
         self.assertEqual(mul(3, 4), 12)
