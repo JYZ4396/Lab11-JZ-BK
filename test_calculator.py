@@ -45,9 +45,9 @@ class TestCalculator(unittest.TestCase):
     def test_log_invalid_argument(self):
         # log(a, b) should raise ValueError if 'a' <= 0
         with self.assertRaises(ValueError):
-            log(-10, 2)
+            logarithm(-10, 2)
         with self.assertRaises(ValueError):
-            log(0, 2)
+            logarithm(0, 2)
 
     def test_hypotenuse(self):
         self.assertAlmostEqual(hypotenuse(3, 4), 5.0)
