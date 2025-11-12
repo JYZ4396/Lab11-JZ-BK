@@ -29,4 +29,19 @@ def log(a, b):
 def exp(a, b):
     return a ** b
 
+def square_root(a):
+    """Return the square root of a, raising ValueError if a < 0."""
+    try:
+        if a < 0:
+            raise ValueError("Cannot take square root of a negative number")
+        return math.sqrt(a)
+    except TypeError:
+        raise ValueError("Input must be a number")
+
+def hypotenuse(a, b):
+    """Return the hypotenuse using Pythagorean theorem."""
+    try:
+        return math.hypot(a, b)
+    except TypeError:
+        raise ValueError("Both inputs must be numbers")
 
